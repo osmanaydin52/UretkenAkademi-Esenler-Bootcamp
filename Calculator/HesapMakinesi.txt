@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="stylesheet" href="lib/style.css" />
+    <script src="lib/script.js"></script>
+
+    <style>
+      table,
+      th,
+      td,
+      label {
+        border: 2px solid gray;
+        text-align: center;
+        margin: 10px;
+        padding: auto;
+      }
+
+      th,
+      td {
+        padding: 2px;
+        margin: 2px;
+      }
+
+      .rakam {
+        width: 95px;
+        height: 40px;
+        border: 3px solid;
+        font-size: 30px;
+        background-color: gray;
+        text-align: center;
+      }
+
+      .islem {
+        width: 50px;
+        height: 40px;
+        border: 3px solid;
+        font-size: 25px;
+        background-color: gray;
+        text-align: center;
+      }
+
+      .textfield {
+        width: 300px;
+        height: 30px;
+        border: 3px solid;
+        font-size: 30px;
+        
+      }
+
+      .div {
+        border: 5px solid black;
+        text-align: center;
+        /*height: 30px;*/
+        width: 355px;
+        font-size: 30px;
+        padding: 3px 10px;
+        margin-left:10px;
+        margin-bottom: 15px;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <form name="HesapMakinesi">
+      <div class="div">Hesap Makinesi</div>
+      <table>
+        <tr>
+          <td colspan="3">
+            <input class="textfield" readonly type="textfield" name="ans" value="" />
+          </td>
+          <td><input type="reset" class="islem" value="C" /></td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" class="rakam" value="1" onclick="document.HesapMakinesi.ans.value+='1'" />
+          </td>
+          <td>
+            <input type="button" class="rakam" value="2" onclick="document.HesapMakinesi.ans.value+='2'" />
+          </td>
+          <td>
+            <input type="button" class="rakam" value="3" onclick="document.HesapMakinesi.ans.value+='3'" />
+          </td>
+          <td>
+            <input type="button" class="islem" value="/" onclick="document.HesapMakinesi.ans.value+='/'" />
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <input type="button" class="rakam" value="4" onclick="document.HesapMakinesi.ans.value+='4'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="5" onclick="document.HesapMakinesi.ans.value+='5'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="6" onclick="document.HesapMakinesi.ans.value+='6'" />
+          </td>
+          <td>
+            <input type="button" class="islem" value="-" onclick="document.HesapMakinesi.ans.value+='-'" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" class="rakam" value="7" onclick="document.HesapMakinesi.ans.value+='7'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="8" onclick="document.HesapMakinesi.ans.value+='8'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="9" onclick="document.HesapMakinesi.ans.value+='9'" />
+          </td>
+          <td>
+            <input type="button" class="islem" value="+" onclick="document.HesapMakinesi.ans.value+='+'" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <input type="button" class="rakam" value="." onclick="document.HesapMakinesi.ans.value+='.'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="0" onclick="document.HesapMakinesi.ans.value+='0'" />
+          </td>
+
+          <td>
+            <input type="button" class="rakam" value="=" onclick="document.HesapMakinesi.ans.value=eval(document.HesapMakinesi.ans.value)" />
+          </td>
+          <td>
+            <input type="button" class="islem" value="*" onclick="document.HesapMakinesi.ans.value+='*'" />
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+
+</html>
